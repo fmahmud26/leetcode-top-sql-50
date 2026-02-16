@@ -1,0 +1,28 @@
+### OS / editor ###
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+### Python ###
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+.pytest_cache/
+
+### Logs / temp ###
+*.log
+logs/
+tmp/
+temp/
+
+### Environments / dependencies ###
+.env
+.env.*
+venv/
+.venv/
+env/
