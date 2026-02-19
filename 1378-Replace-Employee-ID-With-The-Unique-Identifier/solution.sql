@@ -1,4 +1,4 @@
--- PostgreSQL
+-- PostgreSQL --
 
 SELECT unique_id, name
 FROM Employees emp

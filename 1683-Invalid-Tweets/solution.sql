@@ -1,4 +1,4 @@
--- PostgreSQL
+-- PostgreSQL --
 
 SELECT tweet_id
 FROM Tweets

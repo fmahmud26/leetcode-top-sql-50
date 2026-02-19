@@ -1,4 +1,4 @@
--- PostgreSQL
+-- PostgreSQL --
 
 SELECT name, population, area
 FROM World

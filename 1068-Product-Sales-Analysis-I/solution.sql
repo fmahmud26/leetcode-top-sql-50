@@ -1,4 +1,4 @@
--- PostgreSQL
+-- PostgreSQL --
 
 SELECT product_name, year, price
 FROM Sales

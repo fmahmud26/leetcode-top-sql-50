@@ -1,4 +1,4 @@
--- PostgreSQL
+-- PostgreSQL --
 
 SELECT customer_id, COUNT(*) AS count_no_trans
 FROM Visits v
