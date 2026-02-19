@@ -7,21 +7,26 @@
 
 ## Problem (brief)
 
-- **Sales:** `sale_id`, `product_id`, `year`, `quantity`, `price` — (sale_id, year) is PK; `product_id` references Product.
+- **Sales:** `sale_id`, `product_id`, `year`, `quantity`, `price` — (sale_id, year) PK; `product_id` → Product.
 - **Product:** `product_id` (PK), `product_name`.
-- **Task:** For each row in Sales, report `product_name`, `year`, and `price`.
+- **Task:** For each sale, report `product_name`, `year`, and `price`.
 
 ---
 
 ## Example
 
-**Sales:** (1, 100, 2008, 10, 5000), (2, 100, 2009, 12, 5000), (7, 200, 2011, 15, 9000)  
-**Product:** (100, Nokia), (200, Apple), (300, Samsung)
+Sales: sale_id 1→product 100 (2008, 5000), 2→100 (2009, 5000), 7→200 (2011, 9000). Product: 100→Nokia, 200→Apple.
 
-**Output:** (Nokia, 2008, 5000), (Nokia, 2009, 5000), (Apple, 2011, 9000)
+**Output:**
+
+| product_name | year | price |
+|--------------|------|-------|
+| Nokia        | 2008 | 5000  |
+| Nokia        | 2009 | 5000  |
+| Apple        | 2011 | 9000  |
 
 ---
 
 ## Idea
 
-Join **Sales** with **Product** on `product_id` to get `product_name` for each sale. Select `product_name`, `year`, and `price`. An INNER JOIN is enough because every sale has a valid `product_id`.
+`JOIN` Sales and Product on `product_id`; `SELECT product_name, year, price`. One row per sale.

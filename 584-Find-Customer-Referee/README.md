@@ -26,19 +26,10 @@
 | 5  | Zack | 1          |
 | 6  | Mark | 2          |
 
-**Output names:** `Will`, `Jane`, `Bill`, `Zack`
-
-Reason:
-- Exclude customers referred by `id = 2` (`Alex`, `Mark`).
-- Include all others (either no referee or referee id not equal to 2).
+**Output:** `Will`, `Jane`, `Bill`, `Zack` (exclude only those referred by customer 2: Alex, Mark).
 
 ---
 
 ## Idea
 
-Use a `WHERE` filter on `referee_id`:
-
-- Keep rows where `referee_id IS NULL` (no referee),  
-  **or** `referee_id <> 2` (referred by someone other than customer 2),  
-then select the `name` column.
-
+Keep rows where `referee_id IS NULL` or `referee_id != 2`; then `SELECT name`. Excludes only customers referred by id 2.
